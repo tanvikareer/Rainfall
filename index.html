@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+</html>
+  <head>
+  <title>Rainfall Unpredictability</title>
+  <!-- Load JQuery -->
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <meta charset="utf-8">
+  <style>
+  </style>
+
+  </head>
+  
+
+  <body>
+
+     <h2>RAINFALL UNPREDICTABLITY </h2>
+     <p>Mapping Rainfall Unpredictability : The gap between the normal expected rainfall and the actual rainfall over the months in Vidarbha, Maharashtra, India</p>
+
+  	<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto">
+  	</div>
+
+  	<script>
+  		$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'line'
+        },
+        title: {
+            text: 'Monthly Rainfall Unpredictability'
+        },
+        subtitle: {
+            text: 'Vidarbha, Maharashtra, India, 2010'
+        },
+        xAxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        yAxis: {
+            title: {
+                text: 'Rainfall (mm)'
+            }
+        },
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    enabled: true
+                },
+                enableMouseTracking: false
+            }
+        },
+        series: [{
+            name: 'Normal',
+            data: [11.1, 10.7, 12.3, 7.9, 10.9, 167.3, 328.3, 299.9, 179.4, 53.1, 14.6, 7.8]
+        }, {
+            name: 'Actual',
+            data: [16.2, 15.3, 13.3, 0.6, 0.6, 145.0, 448.3, 387.8, 233.6, 51.7, 39.7, 3.1]
+        }]
+    });
+});
+  	</script> 
+
+  </body>
+
